@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
-<body>
+<body class="research-page-body">
     
     <!-- Floating Socials -->
     <div class="floating-socials">
@@ -20,26 +21,219 @@
         <a href="https://www.facebook.com/bal.mansee/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
         <a href="https://tinyurl.com/4s7st69h" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
     </div>
-    <nav class="navbar">
-        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
-        <div class="nav-links">
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/2nd.jpg');">
+<nav class="navbar">
+                                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
+                                <div class="nav-links">
+                                    <a href="index.html">Home</a>
+                                    <a href="index.html#about">About</a>
+                                    <div class="nav-dropdown">
+                                        <a href="index.html#portfolio" class="active">Dimensions <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 3px;"></i></a>
+                                        <div class="dropdown-content">
+                                            <a href="practice.html" ><i class="fa-solid fa-pen-nib"></i> Practice</a>
+                                            <a href="research.html" class="active" ><i class="fa-solid fa-microscope"></i> Research</a>
+                                            <a href="teaching.html" ><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+                                            <a href="purpose.html" ><i class="fa-solid fa-bullseye"></i> Purpose</a>
+                                            <a href="response.html" ><i class="fa-solid fa-reply-all"></i> Response</a>
+                                            <a href="talks.html" ><i class="fa-solid fa-microphone"></i> Talks</a>
+                                            <a href="people.html" ><i class="fa-solid fa-users"></i> People</a>
+                                            <a href="resume.html" ><i class="fa-regular fa-file-lines"></i> Resume</a>
+                                            <a href="travel.html" ><i class="fa-solid fa-earth-americas"></i> Travel</a>
+                                        </div>
+                                    </div>
+                                    <a href="index.html#connect">Initiatives</a>
+                                    <a href="contact.html" class="nav-cta">Let's Talk</a>
+                                </div>
+                            </nav>
+                        
+                            <div class="dimensions-nav-wrapper">
+                                <nav class="dimensions-nav">
+                                    <div class="nav-slider"></div>
+                                    <a href="practice.html" class="dim-link ">Practice</a>
+                                    <a href="research.html" class="dim-link active">Research</a>
+                                    <a href="teaching.html" class="dim-link ">Teaching</a>
+                                    <a href="purpose.html" class="dim-link ">Purpose</a>
+                                    <a href="response.html" class="dim-link ">Response</a>
+                                    <a href="talks.html" class="dim-link ">Talks</a>
+                                    <a href="people.html" class="dim-link ">People</a>
+                                    <a href="resume.html" class="dim-link ">Resume</a>
+                                    <a href="travel.html" class="dim-link ">Travel</a>
+                                </nav>
+                            </div>
+<header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/2nd.jpg');">
         <div class="hero-content">
             <h1 class="reveal-text">Research</h1>
-            <p class="subtitle reveal-text delay-1">Exploring the depths of urban design and architecture.</p>
+            <p class="subtitle reveal-text delay-1">Interdisciplinary inquiries into urban design, resource governance, and sustainability.</p>
         </div>
     </header>
 
-    <section class="page-content">
+    <section class="page-content research-page-content">
         <div class="content-wrapper">
-            <h2>About Research</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="research-intro-card">
+                <div class="intro-glow"></div>
+                <i class="fa-solid fa-quote-left quote-icon-bg"></i>
+                <div class="intro-content">
+                    <p>My research interests are on the interrelationships (complementarities and conflicts) of the human development and nature conservation. My study of social-ecological system approach brings together the over two decades of understanding the various aspects of water and waterbodies wisdoms and worries with respect to urban planning, design, governance, management and sustainability. The interest on the ‘collective action’ or in other words, ‘governance’ by-for-of the people is at the core of this. Water’s connective capacity drives my aspiration to balance the applied and theoretical sciences for an improved understanding of the society as a continuum. The fact that research is involved in every initiative conceived in practice and teaching, the research experience becomes more integrated with instrumental and intrinsic values. Besides, engaging in multi-trans-disciplinary activities is fun and my forte.</p>
+            </div>
+
+            <!-- Infinite Scrolling Research Image Marquee -->
+            <div class="research-gallery-marquee-container">
+                <div class="marquee-track">
+                    <!-- First set of images -->
+                    <div class="marquee-img-card" data-full="Assests/research/ahmd-lakes.jpg" data-caption="Ahmedabad Lakes Study"><img src="Assests/research/ahmd-lakes.jpg" alt="Ahmedabad Lakes"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/sc-and-tech-park.jpg" data-caption="Science & Technology Park"><img src="Assests/research/sc-and-tech-park.jpg" alt="Science & Technology Park"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/sc-city.jpg" data-caption="Science City Site"><img src="Assests/research/sc-city.jpg" alt="Science City"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/SANY0736.jpg" data-caption="Kankaria Lake Project"><img src="Assests/research/SANY0736.jpg" alt="Kankaria Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Chandola.jpg" data-caption="Chandola Lake Fieldwork"><img src="Assests/research/Chandola.jpg" alt="Chandola Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Naroda.jpg" data-caption="Naroda Lake Restoration"><img src="Assests/research/Naroda.jpg" alt="Naroda Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Sarkhej.jpg" data-caption="Sarkhej Roza Historic Tank"><img src="Assests/research/Sarkhej.jpg" alt="Sarkhej Roza"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Thaltej.jpg" data-caption="Thaltej Lake Study"><img src="Assests/research/Thaltej.jpg" alt="Thaltej Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Vastrapur.jpg" data-caption="Vastrapur Lake Development"><img src="Assests/research/Vastrapur.jpg" alt="Vastrapur Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Hamirsar.jpg" data-caption="Hamirsar Lake Conservation"><img src="Assests/research/Hamirsar.jpg" alt="Hamirsar Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Bhojtal.jpg" data-caption="Bhojtal Wetland Study"><img src="Assests/research/Bhojtal.jpg" alt="Bhojtal Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Gundalav-talav.jpg" data-caption="Gundalav Talav Investigation"><img src="Assests/research/Gundalav-talav.jpg" alt="Gundalav Talav"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Durgam-cheruvu.jpg" data-caption="Durgam Cheruvu Hyderabad"><img src="Assests/research/Durgam-cheruvu.jpg" alt="Durgam Cheruvu"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Gurram-Cheruvu.jpg" data-caption="Gurram Cheruvu Governance"><img src="Assests/research/Gurram-Cheruvu.jpg" alt="Gurram Cheruvu"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Hussainsagar.jpg" data-caption="Hussainsagar Lake"><img src="Assests/research/Hussainsagar.jpg" alt="Hussainsagar"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Mir-Alam-Tank.jpg" data-caption="Mir Alam Tank Hyderabad"><img src="Assests/research/Mir-Alam-Tank.jpg" alt="Mir Alam Tank"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Saroornagar.jpg" data-caption="Saroornagar Lake"><img src="Assests/research/Saroornagar.jpg" alt="Saroornagar"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Limdi-Lake.jpg" data-caption="Limdi Lake Preservation"><img src="Assests/research/Limdi-Lake.jpg" alt="Limdi Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Lower-Lake.jpg" data-caption="Lower Lake Bhopal"><img src="Assests/research/Lower-Lake.jpg" alt="Lower Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/mansagar.jpg" data-caption="Mansagar Lake Jaipur"><img src="Assests/research/mansagar.jpg" alt="Mansagar Lake"></div>
+                    
+                    <!-- Duplicated set of images for infinite looping -->
+                    <div class="marquee-img-card" data-full="Assests/research/ahmd-lakes.jpg" data-caption="Ahmedabad Lakes Study"><img src="Assests/research/ahmd-lakes.jpg" alt="Ahmedabad Lakes"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/sc-and-tech-park.jpg" data-caption="Science & Technology Park"><img src="Assests/research/sc-and-tech-park.jpg" alt="Science & Technology Park"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/sc-city.jpg" data-caption="Science City Site"><img src="Assests/research/sc-city.jpg" alt="Science City"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/SANY0736.jpg" data-caption="Kankaria Lake Project"><img src="Assests/research/SANY0736.jpg" alt="Kankaria Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Chandola.jpg" data-caption="Chandola Lake Fieldwork"><img src="Assests/research/Chandola.jpg" alt="Chandola Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Naroda.jpg" data-caption="Naroda Lake Restoration"><img src="Assests/research/Naroda.jpg" alt="Naroda Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Sarkhej.jpg" data-caption="Sarkhej Roza Historic Tank"><img src="Assests/research/Sarkhej.jpg" alt="Sarkhej Roza"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Thaltej.jpg" data-caption="Thaltej Lake Study"><img src="Assests/research/Thaltej.jpg" alt="Thaltej Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Vastrapur.jpg" data-caption="Vastrapur Lake Development"><img src="Assests/research/Vastrapur.jpg" alt="Vastrapur Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Hamirsar.jpg" data-caption="Hamirsar Lake Conservation"><img src="Assests/research/Hamirsar.jpg" alt="Hamirsar Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Bhojtal.jpg" data-caption="Bhojtal Wetland Study"><img src="Assests/research/Bhojtal.jpg" alt="Bhojtal Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Gundalav-talav.jpg" data-caption="Gundalav Talav Investigation"><img src="Assests/research/Gundalav-talav.jpg" alt="Gundalav Talav"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Durgam-cheruvu.jpg" data-caption="Durgam Cheruvu Hyderabad"><img src="Assests/research/Durgam-cheruvu.jpg" alt="Durgam Cheruvu"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Gurram-Cheruvu.jpg" data-caption="Gurram Cheruvu Governance"><img src="Assests/research/Gurram-Cheruvu.jpg" alt="Gurram Cheruvu"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Hussainsagar.jpg" data-caption="Hussainsagar Lake"><img src="Assests/research/Hussainsagar.jpg" alt="Hussainsagar"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Mir-Alam-Tank.jpg" data-caption="Mir Alam Tank Hyderabad"><img src="Assests/research/Mir-Alam-Tank.jpg" alt="Mir Alam Tank"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Saroornagar.jpg" data-caption="Saroornagar Lake"><img src="Assests/research/Saroornagar.jpg" alt="Saroornagar"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Limdi-Lake.jpg" data-caption="Limdi Lake Preservation"><img src="Assests/research/Limdi-Lake.jpg" alt="Limdi Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/Lower-Lake.jpg" data-caption="Lower Lake Bhopal"><img src="Assests/research/Lower-Lake.jpg" alt="Lower Lake"></div>
+                    <div class="marquee-img-card" data-full="Assests/research/mansagar.jpg" data-caption="Mansagar Lake Jaipur"><img src="Assests/research/mansagar.jpg" alt="Mansagar Lake"></div>
+                </div>
+            </div>
+
+            <!-- Premium Ripple Loader (shows while fetching CSV on first load) -->
+            <div class="research-loading-wrapper" id="research-loading-wrapper">
+                <div class="loader-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="loading-text">Loading publications database...</p>
+            </div>
+
+            <!-- Publications Grid Section -->
+            <div class="publications-grid-section" id="publications-grid-section" style="display: none;">
+                <!-- Category Cards Row (Mockup style) -->
+                <div class="category-cards-row" id="category-cards-row">
+                    <button class="category-card active" data-index="0" data-cat="Books" style="--cat-color: #9d4edd;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-book cat-icon"></i>
+                        <span class="cat-name">Books</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                    <button class="category-card" data-index="1" data-cat="Articles" style="--cat-color: #00b4d8;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-newspaper cat-icon"></i>
+                        <span class="cat-name">Articles</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                    <button class="category-card" data-index="2" data-cat="Book Chapters" style="--cat-color: #2ec4b6;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-bookmark cat-icon"></i>
+                        <span class="cat-name">Chapters</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                    <button class="category-card" data-index="3" data-cat="Published Essays and Reports" style="--cat-color: #ff9f1c;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-file-lines cat-icon"></i>
+                        <span class="cat-name">Essays & Reports</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                    <button class="category-card" data-index="4" data-cat="Thesis" style="--cat-color: #ffd166;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-graduation-cap cat-icon"></i>
+                        <span class="cat-name">Thesis</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                    <button class="category-card" data-index="5" data-cat="Professional Reports (Team Member)" style="--cat-color: #ff5a5f;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-users-gear cat-icon"></i>
+                        <span class="cat-name">Prof. Reports</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                    <button class="category-card" data-index="6" data-cat="Papers, Presentations & Participations in Conferences, Seminars, Workshops, Symposia" style="--cat-color: #ff007f;">
+                        <span class="cat-bar"></span>
+                        <i class="fa-solid fa-comments cat-icon"></i>
+                        <span class="cat-name">Presentations</span>
+                        <span class="cat-count">0</span>
+                    </button>
+                </div>
+
+                <!-- Grid Search/Filter Bar -->
+                <div class="grid-search-container">
+                    <div class="grid-search-wrapper">
+                        <i class="fas fa-search grid-search-icon"></i>
+                        <input type="text" id="grid-search-input" placeholder="filter entries..." aria-label="Filter entries">
+                        <button id="grid-search-clear" aria-label="Clear filter"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="grid-search-info">
+                        <span id="grid-results-count">0 entries</span>
+                    </div>
+                </div>
+
+                <!-- Publications Card Grid -->
+                <div class="publications-grid" id="publications-grid">
+                    <!-- Premium Skeleton Shimmer Cards (visible on slow initial load) -->
+                    <div class="pub-card-skeleton">
+                        <div class="skeleton-shimmer skeleton-badge"></div>
+                        <div class="skeleton-shimmer skeleton-title"></div>
+                        <div class="skeleton-shimmer skeleton-title short"></div>
+                        <div class="skeleton-shimmer skeleton-desc"></div>
+                        <div class="skeleton-shimmer skeleton-desc line-2"></div>
+                        <div class="skeleton-shimmer skeleton-desc line-3"></div>
+                        <div class="skeleton-tags">
+                            <div class="skeleton-shimmer skeleton-tag"></div>
+                            <div class="skeleton-shimmer skeleton-tag"></div>
+                        </div>
+                    </div>
+                    <div class="pub-card-skeleton">
+                        <div class="skeleton-shimmer skeleton-badge"></div>
+                        <div class="skeleton-shimmer skeleton-title"></div>
+                        <div class="skeleton-shimmer skeleton-title short"></div>
+                        <div class="skeleton-shimmer skeleton-desc"></div>
+                        <div class="skeleton-shimmer skeleton-desc line-2"></div>
+                        <div class="skeleton-shimmer skeleton-desc line-3"></div>
+                        <div class="skeleton-tags">
+                            <div class="skeleton-shimmer skeleton-tag"></div>
+                            <div class="skeleton-shimmer skeleton-tag"></div>
+                        </div>
+                    </div>
+                    <div class="pub-card-skeleton">
+                        <div class="skeleton-shimmer skeleton-badge"></div>
+                        <div class="skeleton-shimmer skeleton-title"></div>
+                        <div class="skeleton-shimmer skeleton-title short"></div>
+                        <div class="skeleton-shimmer skeleton-desc"></div>
+                        <div class="skeleton-shimmer skeleton-desc line-2"></div>
+                        <div class="skeleton-shimmer skeleton-desc line-3"></div>
+                        <div class="skeleton-tags">
+                            <div class="skeleton-shimmer skeleton-tag"></div>
+                            <div class="skeleton-shimmer skeleton-tag"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -55,6 +249,14 @@
             <p>&copy; 2026 Mansee Bal Bhargava. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Premium Lightbox Modal -->
+    <div id="premium-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

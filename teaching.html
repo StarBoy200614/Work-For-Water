@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     
@@ -20,15 +23,45 @@
         <a href="https://www.facebook.com/bal.mansee/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
         <a href="https://tinyurl.com/4s7st69h" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
     </div>
-    <nav class="navbar">
-        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
-        <div class="nav-links">
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/3rd.jpg');">
+<nav class="navbar">
+                                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
+                                <div class="nav-links">
+                                    <a href="index.html">Home</a>
+                                    <a href="index.html#about">About</a>
+                                    <div class="nav-dropdown">
+                                        <a href="index.html#portfolio" class="active">Dimensions <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 3px;"></i></a>
+                                        <div class="dropdown-content">
+                                            <a href="practice.html" ><i class="fa-solid fa-pen-nib"></i> Practice</a>
+                                            <a href="research.html" ><i class="fa-solid fa-microscope"></i> Research</a>
+                                            <a href="teaching.html" class="active" ><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+                                            <a href="purpose.html" ><i class="fa-solid fa-bullseye"></i> Purpose</a>
+                                            <a href="response.html" ><i class="fa-solid fa-reply-all"></i> Response</a>
+                                            <a href="talks.html" ><i class="fa-solid fa-microphone"></i> Talks</a>
+                                            <a href="people.html" ><i class="fa-solid fa-users"></i> People</a>
+                                            <a href="resume.html" ><i class="fa-regular fa-file-lines"></i> Resume</a>
+                                            <a href="travel.html" ><i class="fa-solid fa-earth-americas"></i> Travel</a>
+                                        </div>
+                                    </div>
+                                    <a href="index.html#connect">Initiatives</a>
+                                    <a href="contact.html" class="nav-cta">Let's Talk</a>
+                                </div>
+                            </nav>
+                        
+                            <div class="dimensions-nav-wrapper">
+                                <nav class="dimensions-nav">
+                                    <div class="nav-slider"></div>
+                                    <a href="practice.html" class="dim-link ">Practice</a>
+                                    <a href="research.html" class="dim-link ">Research</a>
+                                    <a href="teaching.html" class="dim-link active">Teaching</a>
+                                    <a href="purpose.html" class="dim-link ">Purpose</a>
+                                    <a href="response.html" class="dim-link ">Response</a>
+                                    <a href="talks.html" class="dim-link ">Talks</a>
+                                    <a href="people.html" class="dim-link ">People</a>
+                                    <a href="resume.html" class="dim-link ">Resume</a>
+                                    <a href="travel.html" class="dim-link ">Travel</a>
+                                </nav>
+                            </div>
+<header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/3rd.jpg');">
         <div class="hero-content">
             <h1 class="reveal-text">Teaching</h1>
             <p class="subtitle reveal-text delay-1">Educating the next generation of architects and planners.</p>
@@ -37,9 +70,355 @@
 
     <section class="page-content">
         <div class="content-wrapper">
-            <h2>About Teaching</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="glass-panel pedagogy-intro-panel" style="margin-bottom: 4rem; padding: 2.5rem; position: relative; overflow: hidden;">
+                <div class="intro-glow" style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+                <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; align-items: center; gap: 0.75rem; z-index: 2; position: relative;">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--accent); font-size: 1.6rem;"></i> Teaching Pedagogy
+                </h2>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 1.5rem; font-family: var(--font-body); z-index: 2; position: relative;">
+                    With diverse practice and research activities, my teaching pedagogy stems from a <strong>trans-multi-disciplinary focus</strong> around the built environment. Teaching is a lifelong passion that enables constant learning through active sharing.
+                </p>
+                <div style="border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; background: rgba(255, 255, 255, 0.02); padding-top: 1rem; padding-bottom: 1rem; border-radius: 0 12px 12px 0; z-index: 2; position: relative;">
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: rgba(255, 255, 255, 0.8); margin: 0; font-style: italic;">
+                        "The co-learners range from senior professionals and university graduates to school children, emphasizing collective action and public interest."
+                    </p>
+                </div>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: rgba(255, 255, 255, 0.75); margin-bottom: 0; z-index: 2; position: relative;">
+                    Collaborations and teaching engagements include prestigious institutions such as:
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.25rem; z-index: 2; position: relative;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+                        <i class="fa-solid fa-building-columns" style="color: var(--accent); width: 20px;"></i> CEPT University, Ahmedabad
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+                        <i class="fa-solid fa-compass-drafting" style="color: var(--accent); width: 20px;"></i> NID Gandhinagar
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+                        <i class="fa-solid fa-users" style="color: var(--accent); width: 20px;"></i> TISS Hyderabad
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+                        <i class="fa-solid fa-landmark" style="color: var(--accent); width: 20px;"></i> Ostrom Workshop, Indiana
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-section">
+                <div class="carousel-viewport">
+                    <button class="carousel-nav-btn prev" aria-label="Previous Course"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="carousel-track">
+                        <!-- Card 1: A Pedagogy -->
+                        <div class="teaching-card c-purple">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <h3>A Pedagogy</h3>
+                                <p>My personal teaching philosophy and structured approaches to student-centric education.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2019/08/2019.a-pedagogy-dr.-mansee-bal-bhargava-v2.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Thesis Supervision -->
+                        <div class="teaching-card c-purple">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <h3>Thesis Supervision</h3>
+                                <p>Frameworks, expectations, and guidelines for students undergoing academic thesis research.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2020/09/2020.Theses-supervision.MBB_.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Research Method -->
+                        <div class="teaching-card c-blue">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-search"></i></div>
+                                <h3>Research Method</h3>
+                                <p>A fundamental guide for conceptualizing, structuring, and executing research in the built environment.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-tips-to-do-Theiss-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Social Engineering -->
+                        <div class="teaching-card c-green">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+                                <h3>Social Engineering</h3>
+                                <p>Focuses on collective action and community-driven built environments, guiding students towards active and responsible citizenship.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/07/Course-outline-Social-Engineering-for-Collective-Action-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Colour in BE -->
+                        <div class="teaching-card c-orange">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-palette"></i></div>
+                                <h3>Colour in Built Env</h3>
+                                <p>Exploring the psychological, physiological, and design impacts of color selection in architectural and urban spaces.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-Colour-in-BE-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Waterscape -->
+                        <div class="teaching-card c-blue">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-water"></i></div>
+                                <h3>Waterscape</h3>
+                                <p>An unconventional course exploring the critical relationships between water resources, ecology, architecture, and urban governance to build climate-resilient citizenship.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/07/course-outline-Waterscape-Dr.-Mansee-Bal-Bhargava.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Yog -->
+                        <div class="teaching-card c-orange">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-spa"></i></div>
+                                <h3>Yog</h3>
+                                <p>Connecting physical well-being, mindfulness, and design thinking for spatial practitioners.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/07/course-outline-yog-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Journalism of BE -->
+                        <div class="teaching-card c-green">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                                <h3>Journalism of BE</h3>
+                                <p>Writing, documenting, and communicating architectural planning concepts to civil society.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-Journalism-of-BE-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Thesis Workshop -->
+                        <div class="teaching-card c-purple">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+                                <h3>Thesis Workshop</h3>
+                                <p>Interactive bootcamps helping students narrow down thesis topics, structure inquiries, and build methodologies.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-tips-to-do-Theiss-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: Public Open Space -->
+                        <div class="teaching-card c-cyan">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-tree"></i></div>
+                                <h3>Public Open Space</h3>
+                                <p>Design, utility, and governance of shared civic spaces in urban environments.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-PublicOpenSpaces-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 11: Ar is not abt Buildings -->
+                        <div class="teaching-card c-orange">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-building"></i></div>
+                                <h3>Ar is not abt Buildings</h3>
+                                <p>Challenging the definition of architecture beyond structures, focusing on spaces and human interactions.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-Ar-in-not-abt-Buildins-alone-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 12: Governing SES -->
+                        <div class="teaching-card c-blue">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+                                <h3>Governing SES</h3>
+                                <p>Governing complex Social-Ecological Systems (SES) using institutional analysis frameworks.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 13: Urban Lake Management -->
+                        <div class="teaching-card c-blue">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-water"></i></div>
+                                <h3>Urban Lake Management</h3>
+                                <p>Strategic approaches to restoring, planning, and preserving urban water bodies.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/07/course-outline-Urban-lake-management-Dr.-Mansee-Bal-Bhargava.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 14: Collective Action -->
+                        <div class="teaching-card c-green">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                                <h3>Collective Action</h3>
+                                <p>Mobilizing communities and institutions for sustainable spatial and resource management.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/02/course-outline-CA-to-community-action-mansee.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 15: Housing -->
+                        <div class="teaching-card c-cyan">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-city"></i></div>
+                                <h3>Housing</h3>
+                                <p>Designing sustainable, affordable, and context-aware residential spaces for urban habitats.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 16: Keywords -->
+                        <div class="teaching-card c-purple">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-tags"></i></div>
+                                <h3>Keywords</h3>
+                                <p>Conceptual vocabulary list focusing on critical terms and discourse in contemporary design.</p>
+                                <a href="https://www.mansee.in/wp-content/uploads/2018/01/THE-SAFFRON-FEVER.pdf" target="_blank" rel="noopener noreferrer" class="course-outline-btn"><i class="fas fa-file-pdf"></i> View Outline</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 17: Urban Design Studio -->
+                        <div class="teaching-card c-cyan">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-draw-polygon"></i></div>
+                                <h3>Urban Design Studio</h3>
+                                <p>Interactive urban design studio projects analyzing regional morphology and planning scales.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 18: House Design -->
+                        <div class="teaching-card c-orange">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-home"></i></div>
+                                <h3>House Design</h3>
+                                <p>The art and mechanics of domestic residential planning, focusing on spatial optimization.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 19: Rendering -->
+                        <div class="teaching-card c-orange">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+                                <h3>Rendering</h3>
+                                <p>Visual communication techniques to represent spatial plans, shadows, and textures effectively.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 20: Site Analysis -->
+                        <div class="teaching-card c-cyan">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                <h3>Site Analysis</h3>
+                                <p>Crucial techniques to analyze land topography, hydrology, and context before architectural design.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 21: Master's Works -->
+                        <div class="teaching-card c-purple">
+                            <div class="card-bg"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                                <h3>Master's Works</h3>
+                                <p>Highlights and collections of advanced student works and planning projects under my mentorship.</p>
+                                <span class="course-outline-btn" style="opacity: 0.6; cursor: default;"><i class="fas fa-info-circle"></i> Outline N/A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-nav-btn next" aria-label="Next Course"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="carousel-controls">
+                    <div class="carousel-indicator">1 / 21</div>
+                    <div class="carousel-progress-bar">
+                        <div class="carousel-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabbed Academic Credentials Section -->
+            <div class="teaching-credentials-section glass-panel" style="margin-top: 5rem; padding: 3rem;">
+                <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 2.5rem; background: linear-gradient(135deg, var(--text-primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Academic Credentials</h2>
+                
+                <div class="teaching-tabs">
+                    <button class="tab-btn active" data-tab="jury"><i class="fas fa-gavel"></i> Jury Member</button>
+                    <button class="tab-btn" data-tab="undergrad"><i class="fas fa-graduation-cap"></i> Undergrad Theses</button>
+                    <button class="tab-btn" data-tab="postgrad"><i class="fas fa-award"></i> Postgrad Theses</button>
+                    <button class="tab-btn" data-tab="special"><i class="fas fa-certificate"></i> Special Courses</button>
+                </div>
+
+                <div class="tab-content" style="margin-top: 2.5rem;">
+                    <!-- Pane 1: Jury Member -->
+                    <div class="tab-pane active" id="jury">
+                        <ul class="credentials-list">
+                            <li><i class="fas fa-check-circle"></i> Bachelor of Architecture Thesis Defence at IPSA, Saurashtra University, Rajkot</li>
+                            <li><i class="fas fa-check-circle"></i> Bachelor of Planning Student at CEPT University, Ahmedabad</li>
+                            <li><i class="fas fa-check-circle"></i> Master's in Architecture Thesis at Central University, Ajmer</li>
+                            <li><i class="fas fa-check-circle"></i> Urban Design Studio at Grow More Group of Institutions, Himmatnagar</li>
+                            <li><i class="fas fa-check-circle"></i> Urban Design Studio at KLE Technological University, Hubli</li>
+                            <li><i class="fas fa-check-circle"></i> Masters of Planning at CEPT University, Ahmedabad</li>
+                            <li><i class="fas fa-check-circle"></i> Bachelor of Planning Student at CEPT University, Ahmedabad</li>
+                            <li><i class="fas fa-check-circle"></i> P. G. Urban Design Studio on Ujjain Old City Revitalisation at CEPT Ahmedabad</li>
+                            <li><i class="fas fa-check-circle"></i> Under Graduate Final Dissertation at National Institute of Design, Ahmedabad</li>
+                            <li><i class="fas fa-check-circle"></i> MPhil. Environmental Design Final Design at Martin Centre, University of Cambridge</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pane 2: Undergrad Theses -->
+                    <div class="tab-pane" id="undergrad">
+                        <ul class="credentials-list">
+                            <li><i class="fas fa-book"></i> <strong>Swati Thesiya</strong>: Understanding integration of nature into space making in Geoffrey Bawa’s work.</li>
+                            <li><i class="fas fa-book"></i> <strong>Aniket Shah</strong>: Craft Learning Centre and Museum, Ahmedabad.</li>
+                            <li><i class="fas fa-book"></i> <strong>Aarsi Desai</strong>: Vertical Neighbourhood - an Integrated Habitat.</li>
+                            <li><i class="fas fa-book"></i> <strong>Neerja Dave</strong>: Relevance of Geometry in Urban Design.</li>
+                            <li><i class="fas fa-book"></i> <strong>Aakash Srivastav</strong>: Corporate Campus: Vistar (as external guide).</li>
+                            <li><i class="fas fa-book"></i> <strong>Riddhi Madeka</strong>: Exploring underwater architecture, by designing aqua-museum.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pane 3: Postgrad Theses -->
+                    <div class="tab-pane" id="postgrad">
+                        <ul class="credentials-list">
+                            <li><i class="fas fa-award"></i> <strong>Harshit Pathak</strong> (TISS Hyderabad): Institutional Analysis of Urban Lake Policies in India.</li>
+                            <li><i class="fas fa-award"></i> <strong>Richa Garg</strong> (CEPT University, Ahmedabad): Urban Lake Sustainability through Lake Governance: Lake Anasagar, Ajmer.</li>
+                            <li><i class="fas fa-award"></i> <strong>Megha Sanjaniwala</strong> (CEPT University, Ahmedabad): Urban Lake Sustainability, Understanding Lake Governance of Gundalav Talab in Kishangarh, Rajasthan.</li>
+                            <li><i class="fas fa-award"></i> <strong>Tanima Tabassum</strong> (IHS-EUR): Self-Organisation in Inclusiveness of Ramna Park, Dhaka, Bangladesh.</li>
+                            <li><i class="fas fa-award"></i> <strong>Fuchen Yu</strong> (IHS-EUR): Sustainable Management of Primary & Middle Schools in Jiaonan city, China.</li>
+                            <li><i class="fas fa-award"></i> <strong>Irha Enjang Dwita</strong> (IHS-EUR): Sustainable Management of Urban Green Spaces in Jakarta, Indonesia.</li>
+                            <li><i class="fas fa-award"></i> <strong>Rindy Farrah Indah Dewi</strong> (IHS-EUR): Implementing Congestion Charge in Jakarta.</li>
+                            <li><i class="fas fa-award"></i> <strong>Ferdinand Yayra Kofi Yali</strong> (IHS-EUR): Building Institutional Capacity for the Implementation of the Bus Rapid Transit System (BRTS) in Accra.</li>
+                            <li><i class="fas fa-award"></i> <strong>Zijing Guo</strong> (IHS-EUR): People’s Perception on the Artificial Eco-wetland Project in Kunming: Study of Sustainability of Dianchi Lake in China.</li>
+                            <li><i class="fas fa-award"></i> <strong>Teguh Setiawan</strong> (IHS-EUR): Role of Public Art in Urban Environment: A Case Study of Mural Art in Yogyakarta City in Indonesia.</li>
+                            <li><i class="fas fa-award"></i> <strong>Akhmad Syajari</strong> (IHS-EUR): Community Participation on Environment Friendly Kampung Program in Kampung Berdikari Palembang South Sumatera Province, Indonesia.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pane 4: Special Courses -->
+                    <div class="tab-pane" id="special">
+                        <ul class="credentials-list">
+                            <li><i class="fas fa-certificate"></i> Ontology approach to analyse wetland management using Social-ecological Framework, at RIHN Kyoto with Abe Sansei and Terukazu Kumazawa.</li>
+                            <li><i class="fas fa-certificate"></i> Institutional Analysis Development Framework, Social-ecological Framework and Governing the Commons, at The Ostrom Workshop Bloomington with Prof. Elinor Ostrom.</li>
+                            <li><i class="fas fa-certificate"></i> Advanced Research Methodology for PhD in Public Administration, at Netherlands Institute of Governance.</li>
+                            <li><i class="fas fa-certificate"></i> Teacher’s Training for Yogasanas, Meditation and Yogic Science and Second Degree in REIKI for Natural Healing, at Shivanand Ashram, Ahmedabad.</li>
+                            <li><i class="fas fa-certificate"></i> Advanced Yog Training at Vasant Nature Cure, Ahmedabad. <a href="https://www.mansee.in/wp-content/uploads/2018/07/Yog-Group-for-teaching-Page-website.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">Read More</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

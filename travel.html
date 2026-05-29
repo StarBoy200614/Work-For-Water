@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,26 +21,176 @@
         <a href="https://www.facebook.com/bal.mansee/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
         <a href="https://tinyurl.com/4s7st69h" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
     </div>
-    <nav class="navbar">
-        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
-        <div class="nav-links">
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/9th.jpg');">
+<nav class="navbar">
+                                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
+                                <div class="nav-links">
+                                    <a href="index.html">Home</a>
+                                    <a href="index.html#about">About</a>
+                                    <div class="nav-dropdown">
+                                        <a href="index.html#portfolio" class="active">Dimensions <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 3px;"></i></a>
+                                        <div class="dropdown-content">
+                                            <a href="practice.html" ><i class="fa-solid fa-pen-nib"></i> Practice</a>
+                                            <a href="research.html" ><i class="fa-solid fa-microscope"></i> Research</a>
+                                            <a href="teaching.html" ><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+                                            <a href="purpose.html" ><i class="fa-solid fa-bullseye"></i> Purpose</a>
+                                            <a href="response.html" ><i class="fa-solid fa-reply-all"></i> Response</a>
+                                            <a href="talks.html" ><i class="fa-solid fa-microphone"></i> Talks</a>
+                                            <a href="people.html" ><i class="fa-solid fa-users"></i> People</a>
+                                            <a href="resume.html" ><i class="fa-regular fa-file-lines"></i> Resume</a>
+                                            <a href="travel.html" class="active" ><i class="fa-solid fa-earth-americas"></i> Travel</a>
+                                        </div>
+                                    </div>
+                                    <a href="index.html#connect">Initiatives</a>
+                                    <a href="contact.html" class="nav-cta">Let's Talk</a>
+                                </div>
+                            </nav>
+                        
+                            <div class="dimensions-nav-wrapper">
+                                <nav class="dimensions-nav">
+                                    <div class="nav-slider"></div>
+                                    <a href="practice.html" class="dim-link ">Practice</a>
+                                    <a href="research.html" class="dim-link ">Research</a>
+                                    <a href="teaching.html" class="dim-link ">Teaching</a>
+                                    <a href="purpose.html" class="dim-link ">Purpose</a>
+                                    <a href="response.html" class="dim-link ">Response</a>
+                                    <a href="talks.html" class="dim-link ">Talks</a>
+                                    <a href="people.html" class="dim-link ">People</a>
+                                    <a href="resume.html" class="dim-link ">Resume</a>
+                                    <a href="travel.html" class="dim-link active">Travel</a>
+                                </nav>
+                            </div>
+<header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/9th.jpg');">
         <div class="hero-content">
             <h1 class="reveal-text">Travel</h1>
             <p class="subtitle reveal-text delay-1">Global perspectives shaping urban understanding.</p>
         </div>
     </header>
 
-    <section class="page-content">
+    <section class="travel-dashboard-section">
         <div class="content-wrapper">
-            <h2>About Travel</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- Travel Stats Dashboard Header -->
+            <div class="travel-stats-grid" id="travel-stats">
+                <div class="travel-stat-card">
+                    <div class="stat-icon"><i class="fas fa-globe-americas"></i></div>
+                    <div class="stat-number" id="stat-countries">18</div>
+                    <div class="stat-label">Countries Explored</div>
+                </div>
+                <div class="travel-stat-card">
+                    <div class="stat-icon"><i class="fas fa-city"></i></div>
+                    <div class="stat-number" id="stat-cities">46</div>
+                    <div class="stat-label">Cities Visited</div>
+                </div>
+                <div class="travel-stat-card">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="stat-number" id="stat-talks">42</div>
+                    <div class="stat-label">Keynotes & Lectures</div>
+                </div>
+                <div class="travel-stat-card">
+                    <div class="stat-icon"><i class="fas fa-route"></i></div>
+                    <div class="stat-number" id="stat-regions">5</div>
+                    <div class="stat-label">Academic Collaborations</div>
+                </div>
+            </div>
+
+            <!-- Controls (Search & Filter) -->
+            <div class="travel-controls">
+                <div class="search-box-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="travel-search" placeholder="Search by city, country or institution..." autocomplete="off">
+                    <div class="search-suggestions" id="search-suggestions" style="display: none;"></div>
+                </div>
+                <div class="custom-select-wrapper" id="travel-location-wrapper">
+                    <div class="custom-select-trigger" id="travel-location-trigger">
+                        <i class="fas fa-map-marker-alt filter-icon"></i>
+                        <span>Jump to Location...</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="custom-options-container" id="travel-location-options">
+                        <!-- Visited locations will be populated dynamically in JS -->
+                    </div>
+                </div>
+                <div class="custom-select-wrapper" id="travel-category-wrapper">
+                    <div class="custom-select-trigger" id="travel-category-trigger">
+                        <i class="fas fa-filter filter-icon"></i>
+                        <span>All Journeys</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="custom-options-container" id="travel-category-options">
+                        <div class="custom-option selected" data-value="all">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>All Journeys</span>
+                        </div>
+                        <div class="custom-option" data-value="Conference">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Conferences & Seminars</span>
+                        </div>
+                        <div class="custom-option" data-value="Research">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Research & Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map and Detail Panel Container -->
+            <div class="travel-map-wrapper">
+                <div id="travel-map"></div>
+                
+                <!-- Reset Map Button -->
+                <button id="map-reset-btn" class="map-overlay-btn" aria-label="Reset Map View">
+                    <i class="fas fa-redo-alt"></i> Reset Map
+                </button>
+                
+                <!-- Details Side Panel (Translucent Glass Overlay) -->
+                <div id="details-panel" class="details-panel-hidden">
+                    <button class="details-close-btn" id="details-close" aria-label="Close details">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="details-content" id="details-content">
+                        <div class="details-placeholder">
+                            <i class="fas fa-map-marker-alt placeholder-icon"></i>
+                            <h3>Select a city on the map</h3>
+                            <p>Click on any pulsing yellow marker to explore the travel details, institutions visited, and talks delivered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Page Intro (Shifted after map) -->
+            <div class="travel-intro reveal-text delay-2">
+                <h2>Journeys & Perspectives</h2>
+                <p>Work and a dream to know the world bring me to places. The networking, socializing and site seeing go hand in hand with the work. I'm an urban traveler and often been a solo traveler. Walking is my way of measuring a place. People and places of congregation interest me. Waterfronts are my favourite. I like to observe the activities in the small streets and spaces as they truly represent the culture of a place. I'm fascinated by the food and faith of the diverse cultures. Amidst the busy built environments of the cities, I'm often looking for nature and calmness. Yes, the nature trips are long overdue.</p>
+                <p>I've traveled to over hundred cities around the world and lived in a few. Born in Bilaspur (the rice bowl of India) and brought up partly there and partly in Bongaon (border city of India to Bangladesh) and Tatanagar (the Steel city of India), over the years, life has geographically shifted towards the west. Lived in Gwalior and Bhopal (lake city) for undergrad, then moved to Ahmedabad (Gandhi city) for a post grad and it is my Base as of now. Lived in Cambridge and Rotterdam for further post grads. Rotterdam feels as a second home where I lived long to pursue my PhD. With a short stint in the east at Kyoto, now I'm at the far west at Phoenix.</p>
+                <p>I believe in keeping the doors and windows open for all the cultures and values to enter my house and enrich my life experiences. Yet, I shall still remain grounded to my Indian roots.</p>
+            </div>
+
+            <!-- Toggle Button for Full Table -->
+            <div class="table-toggle-wrapper" style="text-align: center; margin-top: 3.5rem; margin-bottom: 2rem;">
+                <button id="toggle-table-btn" aria-label="Toggle Full Travel Table">
+                    <i class="fas fa-table"></i> View Full Travel Log <i class="fas fa-chevron-down" id="toggle-icon"></i>
+                </button>
+            </div>
+
+            <!-- Glassmorphic Travel Table Container (Initially Hidden) -->
+            <div id="travel-table-container">
+                <div class="glass-table-wrapper">
+                    <table class="glass-travel-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 80px;">Year</th>
+                                <th style="width: 180px;">Location</th>
+                                <th style="width: 220px;">Institution / Host</th>
+                                <th style="width: 150px;">Purpose / Type</th>
+                                <th>Event Details</th>
+                                <th style="width: 110px; text-align: center;">Reference</th>
+                            </tr>
+                        </thead>
+                        <tbody id="travel-table-body">
+                            <!-- Dynamic rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -56,5 +207,8 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="travel-map.js"></script>
 </body>
 </html>

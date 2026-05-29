@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
     
@@ -20,28 +21,100 @@
         <a href="https://www.facebook.com/bal.mansee/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
         <a href="https://tinyurl.com/4s7st69h" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
     </div>
-    <nav class="navbar">
-        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
-        <div class="nav-links">
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/1st.jpg');">
+<nav class="navbar">
+                                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">MBB.</a>
+                                <div class="nav-links">
+                                    <a href="index.html">Home</a>
+                                    <a href="index.html#about">About</a>
+                                    <div class="nav-dropdown">
+                                        <a href="index.html#portfolio" class="active">Dimensions <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 3px;"></i></a>
+                                        <div class="dropdown-content">
+                                            <a href="practice.html" class="active" ><i class="fa-solid fa-pen-nib"></i> Practice</a>
+                                            <a href="research.html" ><i class="fa-solid fa-microscope"></i> Research</a>
+                                            <a href="teaching.html" ><i class="fa-solid fa-chalkboard-user"></i> Teaching</a>
+                                            <a href="purpose.html" ><i class="fa-solid fa-bullseye"></i> Purpose</a>
+                                            <a href="response.html" ><i class="fa-solid fa-reply-all"></i> Response</a>
+                                            <a href="talks.html" ><i class="fa-solid fa-microphone"></i> Talks</a>
+                                            <a href="people.html" ><i class="fa-solid fa-users"></i> People</a>
+                                            <a href="resume.html" ><i class="fa-regular fa-file-lines"></i> Resume</a>
+                                            <a href="travel.html" ><i class="fa-solid fa-earth-americas"></i> Travel</a>
+                                        </div>
+                                    </div>
+                                    <a href="index.html#connect">Initiatives</a>
+                                    <a href="contact.html" class="nav-cta">Let's Talk</a>
+                                </div>
+                            </nav>
+                        
+                            <div class="dimensions-nav-wrapper">
+                                <nav class="dimensions-nav">
+                                    <div class="nav-slider"></div>
+                                    <a href="practice.html" class="dim-link active">Practice</a>
+                                    <a href="research.html" class="dim-link ">Research</a>
+                                    <a href="teaching.html" class="dim-link ">Teaching</a>
+                                    <a href="purpose.html" class="dim-link ">Purpose</a>
+                                    <a href="response.html" class="dim-link ">Response</a>
+                                    <a href="talks.html" class="dim-link ">Talks</a>
+                                    <a href="people.html" class="dim-link ">People</a>
+                                    <a href="resume.html" class="dim-link ">Resume</a>
+                                    <a href="travel.html" class="dim-link ">Travel</a>
+                                </nav>
+                            </div>
+<header class="inner-hero" style="background-image: linear-gradient(to bottom, rgba(3,7,18,0.7), rgba(3,7,18,1)), url('Assests/1st.jpg');">
         <div class="hero-content">
             <h1 class="reveal-text">Practice</h1>
             <p class="subtitle reveal-text delay-1">Applied architectural and urban design in the real world.</p>
         </div>
     </header>
 
-    <section class="page-content">
-        <div class="content-wrapper">
-            <h2>About Practice</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <section class="page-content flowchart-page">
+        <div class="practice-intro">
+            <h2 class="gradient-text main-river-heading">Architectural & Urban Design Practice</h2>
+            <p>Any social-ecological practice is a collective effort. My entrepreneurial journey is multi-faceted involving landscape, urban design, urban planning, architecture, policy analysis, community engagement, and philanthropy.</p>
+        </div>
+
+        <div class="flowchart-container" id="dynamic-mindmap">
+            <!-- Skeleton Loader (shows while fetching CSV) -->
+            <div class="flow-row skeleton-row" style="margin-bottom: 2rem;">
+                <div class="projects-column left-projects">
+                    <div class="skeleton-box"></div>
+                    <div class="skeleton-box"></div>
+                </div>
+                <div class="connection-area"></div>
+                <div class="center-column">
+                    <div class="vertical-line top-line" style="background: transparent; border: none;"></div>
+                    <div class="skeleton-circle"></div>
+                    <div class="vertical-line" style="border: none;"></div>
+                </div>
+                <div class="connection-area"></div>
+                <div class="projects-column right-projects">
+                    <div class="skeleton-box"></div>
+                    <div class="skeleton-box"></div>
+                </div>
+            </div>
+            
+            <div class="flow-row skeleton-row">
+                <div class="projects-column left-projects">
+                    <div class="skeleton-box"></div>
+                    <div class="skeleton-box"></div>
+                </div>
+                <div class="connection-area"></div>
+                <div class="center-column">
+                    <div class="vertical-line top-line" style="border: none;"></div>
+                    <div class="skeleton-circle"></div>
+                    <div class="vertical-line" style="background: transparent; border: none;"></div>
+                </div>
+                <div class="connection-area"></div>
+                <div class="projects-column right-projects">
+                    <div class="skeleton-box"></div>
+                    <div class="skeleton-box"></div>
+                </div>
+            </div>
+            <!-- Dynamic Mind-Map content will be injected here via JavaScript from Google Sheets/CSV -->
         </div>
     </section>
+
+
+
 
     <footer>
         <div class="footer-content">

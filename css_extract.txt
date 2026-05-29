@@ -1,0 +1,128 @@
+Created At: 2026-05-29T05:10:32Z
+Completed At: 2026-05-29T05:10:32Z
+File Path: `file:///c:/Users/manas/Desktop/mansee-preview/style.css`
+Total Lines: 5276
+Total Bytes: 122860
+Showing lines 1800 to 2200
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1800:     font-weight: 500;
+1801:     margin-top: 1.5rem;
+1802:     padding: 1rem 1.5rem;
+1803:     border-radius: 12px;
+1804:     display: none; /* hidden by default */
+1805:     animation: formFadeIn 0.4s ease forwards;
+1806: }
+1807: 
+1808: .form-status-message.success {
+1809:     display: block;
+1810:     background: rgba(42, 157, 143, 0.15);
+1811:     border: 1px solid rgba(42, 157, 143, 0.3);
+1812:     color: #4ade80;
+1813: }
+1814: 
+1815: .form-status-message.error {
+1816:     display: block;
+1817:     background: rgba(239, 68, 68, 0.15);
+1818:     border: 1px solid rgba(239, 68, 68, 0.3);
+1819:     color: #f87171;
+1820: }
+1821: 
+1822: /* Button Loading State */
+1823: .submit-btn:disabled {
+1824:     opacity: 0.6;
+1825:     cursor: not-allowed;
+1826:     background: linear-gradient(135deg, rgba(0, 180, 216, 0.5), rgba(0, 87, 182, 0.5));
+1827:     box-shadow: none;
+1828:     transform: none !important;
+1829: }
+1830: 
+1831: @keyframes formFadeIn {
+1832:     from { opacity: 0; transform: translateY(5px); }
+1833:     to { opacity: 1; transform: translateY(0); }
+1834: }
+1835: 
+1836: /* 3D Teaching Page Styles */
+1837: .carousel-section {
+1838:     position: relative;
+1839:     width: 100%;
+1840:     display: flex;
+1841:     flex-direction: column;
+1842:     align-items: center;
+1843:     gap: 1.5rem;
+1844:     margin: 3rem 0;
+1845:     overflow: visible;
+1846: }
+1847: 
+1848: @media (min-width: 1024px) {
+1849:     .carousel-section {
+1850:         height: 100vh;
+1851:         margin: 0;
+1852:         padding: 0;
+1853:         
+<truncated 9279 bytes>
+slateY(-2px);
+2137: }
+2138: 
+2139: /* Premium Floating Arrow Buttons */
+2140: .carousel-nav-btn {
+2141:     position: absolute;
+2142:     top: 50%;
+2143:     transform: translateY(-50%);
+2144:     width: 60px;
+2145:     height: 60px;
+2146:     border-radius: 50%;
+2147:     background: rgba(255, 255, 255, 0.02);
+2148:     border: 1px solid rgba(255, 255, 255, 0.08);
+2149:     color: var(--text-secondary);
+2150:     display: flex;
+2151:     align-items: center;
+2152:     justify-content: center;
+2153:     font-size: 1.3rem;
+2154:     cursor: pointer;
+2155:     backdrop-filter: blur(15px);
+2156:     -webkit-backdrop-filter: blur(15px);
+2157:     z-index: 15;
+2158:     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+2159: }
+2160: 
+2161: .carousel-nav-btn.prev {
+2162:     left: calc(50% - 310px);
+2163: }
+2164: 
+2165: .carousel-nav-btn.next {
+2166:     right: calc(50% - 310px);
+2167: }
+2168: 
+2169: .carousel-nav-btn:hover {
+2170:     background: rgba(0, 180, 216, 0.15);
+2171:     border-color: rgba(0, 180, 216, 0.4);
+2172:     box-shadow: 0 0 25px rgba(0, 180, 216, 0.3);
+2173:     color: #fff;
+2174:     transform: translateY(-50%) scale(1.08);
+2175: }
+2176: 
+2177: .carousel-nav-btn:active {
+2178:     transform: translateY(-50%) scale(0.95);
+2179: }
+2180: 
+2181: /* Carousel Controls & Progress */
+2182: .carousel-controls {
+2183:     display: flex;
+2184:     flex-direction: column;
+2185:     align-items: center;
+2186:     gap: 0.8rem;
+2187:     width: 100%;
+2188:     max-width: 320px;
+2189:     margin-top: 1.5rem;
+2190: }
+2191: 
+2192: .carousel-indicator {
+2193:     font-family: var(--font-heading);
+2194:     font-size: 1.1rem;
+2195:     color: var(--text-secondary);
+2196:     font-weight: 600;
+2197:     letter-spacing: 1px;
+2198: }
+2199: 
+2200: .carousel-progress-bar {
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
